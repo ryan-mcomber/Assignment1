@@ -1,0 +1,29 @@
+Alt-Svc ?hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337; quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+ 	-A server uses "Alt-Svc" header (meaning Alternative Services) to indicate that its resources can also be accessed at a different network location (host or port) or using a different protocol
+Cache-Control ?private, max-age=0, must-revalidate, no-transform
+	-Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds
+Content-Encoding ?gzip
+	-The type of encoding used on the data.
+Content-Type ?application/json; charset=UTF-8
+	-The MIME type of this content
+Date ?Sun, 04 Feb 2018 05:46:01 GMT
+	-The date and time that the message was sent (in "HTTP-date" format as defined by RFC 7231) [38]
+ETag ?"f6QLsd8inUgRKJVNBqJ8xHnPb0w/TMBYEFmiex4xVc6lJ2ocilQCu1c"
+	-An identifier for a specific version of a resource, often a message digest
+Expires ?Sun, 04 Feb 2018 05:46:01 GMT
+	-Gives the date/time after which the response is considered stale (in "HTTP-date" format as defined by RFC 7231)
+Server ?GSE
+	-A name for the server
+Transfer-Encoding ?chunked
+	-The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity.
+Must not be used with HTTP/2.[9]
+Vary ?Origin
+	-Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server
+Vary ?X-Origin
+	-Same as above
+X-Content-Type-Options ?nosniff
+	-Content Security Policy definition.
+X-Frame-Options ?SAMEORIGIN
+	-Clickjacking protection: deny - no rendering within a frame, sameorigin - no rendering if origin mismatch, allow-from - allow from specified location, allowall - non-standard, allow from any location
+X-XSS-Protection ?1; mode=block
+	-Cross-site scripting (XSS) filter
